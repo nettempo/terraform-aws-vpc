@@ -112,6 +112,12 @@ variable "intra_subnet_assign_ipv6_address_on_creation" {
   default     = null
 }
 
+variable "ipv6_ipam_pool_id" {
+  description = "IPAM Pool ID for a IPv6 Pool"
+  type        = string
+  default     = null
+}
+
 variable "secondary_cidr_blocks" {
   description = "List of secondary CIDR blocks to associate with the VPC to extend the IP Address pool"
   type        = list(string)
