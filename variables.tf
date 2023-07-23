@@ -118,6 +118,12 @@ variable "ipv6_ipam_pool_id" {
   default     = null
 }
 
+variable "ipv6_netmask_length" {
+  description = "IPv6 Netmask length"
+  type = number
+  default = 56
+}
+
 variable "secondary_cidr_blocks" {
   description = "List of secondary CIDR blocks to associate with the VPC to extend the IP Address pool"
   type        = list(string)

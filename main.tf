@@ -28,6 +28,7 @@ resource "aws_vpc" "this" {
   enable_classiclink_dns_support   = var.enable_classiclink_dns_support
   assign_generated_ipv6_cidr_block = local.assign_generated_ipv6_cidr_block
   ipv6_ipam_pool_id                = var.ipv6_ipam_pool_id
+  ipv6_netmask_length              = var.ipv6_netmask_length
 
   tags = merge(
     { "Name" = var.name },
