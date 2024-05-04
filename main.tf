@@ -24,8 +24,6 @@ resource "aws_vpc" "this" {
   instance_tenancy                 = var.instance_tenancy
   enable_dns_hostnames             = var.enable_dns_hostnames
   enable_dns_support               = var.enable_dns_support
-  enable_classiclink               = var.enable_classiclink
-  enable_classiclink_dns_support   = var.enable_classiclink_dns_support
   assign_generated_ipv6_cidr_block = local.assign_generated_ipv6_cidr_block
   ipv6_ipam_pool_id                = var.ipv6_ipam_pool_id
   ipv6_netmask_length              = var.ipv6_netmask_length
@@ -1236,7 +1234,6 @@ resource "aws_default_vpc" "this" {
 
   enable_dns_support   = var.default_vpc_enable_dns_support
   enable_dns_hostnames = var.default_vpc_enable_dns_hostnames
-  enable_classiclink   = var.default_vpc_enable_classiclink
 
   tags = merge(
     { "Name" = coalesce(var.default_vpc_name, "default") },
